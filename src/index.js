@@ -6,7 +6,9 @@ import './index.css'
 import App from './App'
 import registerServiceWorker from './registerServiceWorker'
 
-ReactGA.initialize('UA-819513-8')
+if (process.env.REACT_APP_TARGET === 'deploy') {
+  ReactGA.initialize('UA-819513-8')
+}
 
 function logPageView () {
   ReactGA.set({ page: window.location.pathname + window.location.search })
