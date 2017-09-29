@@ -17,9 +17,9 @@ class App extends Component {
             <Link to='products'>Products</Link>
           </div>
         </div>
-        <p className='App-intro'>
+        <div className='App-intro'>
           {this.props.children}
-        </p>
+        </div>
       </div>
     )
   }
